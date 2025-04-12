@@ -1,4 +1,4 @@
-# RSREU postgresql filling
+# Student database filler
 
 A java program for generating data for database tables.
 
