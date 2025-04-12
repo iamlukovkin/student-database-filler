@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- TODO: Change connection credentials  -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/your_database</property>
+        <property name="connection.username">your_username</property>
+        <property name="connection.password">EnterStrongPassword</property>
+        <property name="connection.pool_size">1</property>
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <property name="current_session_context_class">thread</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">validate</property>
+        <mapping class="ru.iamlukovkin.entity.Student"/>
+        <mapping class="ru.iamlukovkin.entity.StudentEmail"/>
+        <mapping class="ru.iamlukovkin.entity.StudentTelephone"/>
+        <mapping class="ru.iamlukovkin.entity.ParentInformation"/>
+        <mapping class="ru.iamlukovkin.entity.StudentAndParent"/>
+        <mapping class="ru.iamlukovkin.entity.Study"/>
+    </session-factory>
+</hibernate-configuration>
+
